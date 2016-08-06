@@ -140,8 +140,3 @@ endif
 ifeq (solaris-sparc,$(BUILD.system)-$(BUILD.machine))
     FFMPEG.CONFIGURE.extra += --disable-demuxer=mpc8
 endif
-
-ifeq (1,$(FEATURE.local_yasm))
-    FFMPEG.CONFIGURE.env = PATH="$(call fn.ABSOLUTE,$(CONTRIB.build/)bin):$(PATH)"
-    FFMPEG.BUILD.env = PATH="$(call fn.ABSOLUTE,$(CONTRIB.build/)bin):$(PATH)"
-endif
